@@ -1,10 +1,13 @@
 ## Todo
 - [ ] make collapsable sections for examples.md
+- [ ] memoize buildQueryDict even though performance doesn't really matter
+- [ ] make rarity property in artifacts an array of possible rarities. who cares about searching by only min/max rarity.
 - [ ] add properties information of data to readme.md
 - [ ] add function to get lists verbose
+- [ ] replace every character description with in-game description
 - [ ] language-specific sanitation of query inputs
-- [ ] birthdays for characters
-- [ ] add cooking/ingredients
+- [ ] add ingredients
+- [ ] add foods/consumables. move specialty dishes in "recipes" to foods/consumables
 - [ ] add domains
 - [ ] add materials
 - [ ] add potions/consumables before that other npm library finishes it
@@ -12,32 +15,47 @@
 - [ ] add achievements
 - [ ] add commissions
 - [ ] add scaling calculators
-- [ ] ground pound ur mom
 - [ ] npc???
 - [ ] pretend to add tests
 - [ ] add banner history maybe
-- [ ] maybe use an actual dbms
-- [ ] function to get random image of character off pixiv or something
 
-## Missing weaponmaterialtype for weapons
+## Weapons not in game yet
+- [ ] alleyhunter
 - [ ] ambercatalyst
-- [x] blackcliffamulet
-- [x] blackclifflongsword
-- [x] blackcliffpole
 - [ ] ebonybow
-- [ ] kunwusirisrift
-- [x] lithicblade
-- [x] lithicspear
+- [ ] lithicblade
+- [ ] lithicspear
 - [ ] quartz
-- [x] royalbow
-- [x] royallongsword
-- [x] thealleyflash
+- [ ] royalbow
+- [ ] royallongsword
+- [ ] thealleyflash
+- [ ] wine and song
 
-## Missing constellations for
-- [ ] xiao
-- [ ] zhongli
+## Recipes
+- [ ] missing a lot of images
+- [ ] Jueyun Guoba (is this in the game yet?)
+- [ ] Sunshine Sprat (is this in the game yet?)
+- [ ] Universal Peace (not in game yet.)
+- [ ] verify Moon Pie ingredients in-game
+- [ ] verify Prize Catch in-game
+
+- [ ] verify Definitely Not Bar Food! in-game
+- [ ] verify Caelum Terra Mora Meat in-game
+
+- [ ] verify Invigorating Pizza in-game
+- [ ] verify Puppy-Paw Hash Brown in-game
+
+- [ ] verify Crab, Ham & Veggie Bake in-game
+- [ ] verify Nutritious Meal (V. 593) in-game
+
 
 ## Done
+- [x] add weapon substats to weapon. revamped weapon refine info (12/6)
+- [x] birthdays, constellations, substats for characters (12/5)
+- [x] make sure webpack can build (12/2)
+- [x] added zhongli and xinyan character, constellation, talent, and specialty (12/2)
+- [x] added sources for every recipe (12/1)
+- [x] add recipes (11/29)
 - [x] add talents (11/26)
 - [x] finish constellation (11/25)
 - [x] support possible name aliases for query (11/24)

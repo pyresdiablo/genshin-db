@@ -4,16 +4,19 @@
 		        "weaponmaterialtypes", "talentmaterialtypes", "constellations",
 		    	"talents", "recipes"],
 	"indexByCategories": {
-		"characters": ["element", "weapontype", "talentmaterialtype", "gender", "region", "rarity"],
-		"weapons": ["weapontype", "rarity", "weaponmaterialtype"],
+		"characters": ["element", "weapontype", "talentmaterialtype", "birthday", "substat", "gender", "region", "rarity"],
+		"weapons": ["weapontype", "rarity", "substat", "weaponmaterialtype"],
 		"artifacts": ["minrarity", "maxrarity"],
-		"recipes": ["attack", "defense", "heal", "revive", "stamina"],
+		"recipes": ["rarity", "foodrecipetype", "ingredients", "buffs"],
 		"weaponmaterialtypes": ["day", "region", "domainofforgery"],
 		"talentmaterialtypes": ["day", "region", "domainofmastery"]
 	},
+
 	"altnames": {
+		"characters": ["aliases", "constellation"],
 		"weaponmaterialtypes": ["2starname", "3starname", "4starname", "5starname"],
 		"constellations": ["aliases"],
-		"talents": ["aliases"]
+		"talents": ["aliases"],
+		"recipes": ["aliases", "cook"]
 	}
 }

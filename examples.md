@@ -13,13 +13,17 @@ const genshin = require('genshin-db');
 - [genshin.weaponmaterialtypes(query[, opts])](#genshinweaponmaterialtypesquery-opts)
 - [genshin.talentmaterialtypes(query[, opts])](#genshintalentmaterialtypesquery-opts)
 - [genshin.artifacts(query[, opts])](#genshinartifactsquery-opts)
+- [genshin.recipes(query[, opts])](#genshinrecipesquery-opts)
 - [genshin.elements(query[, opts])](#genshinelementsquery-opts)
 - [genshin.rarity(query[, opts])](#genshinrarityquery-opts)
 
 # genshin.characters(query[, opts])
 
 - [genshin.characters('amber')](#genshincharactersamber)
+- [genshin.characters('carmen')](#genshincharacterscarmen)
+- [genshin.characters('december')](#genshincharactersdecember)
 - [genshin.characters('pyro')](#genshincharacterspyro)
+- [genshin.characters('geo dmg')](#genshincharactersgeo-dmg)
 - [genshin.characters('liyue')](#genshincharactersliyue)
 - [genshin.characters('sword')](#genshincharacterssword)
 - [genshin.characters('ballad')](#genshincharactersballad)
@@ -28,30 +32,70 @@ const genshin = require('genshin-db');
 
 ```js
 {
-    "name": "Amber",
-    "titles": [
-        "Outrider",
-        "Champion Glider"
-    ],
-    "element": "Pyro",
-    "weapontype": "Bow",
-    "gender": "Female",
-    "region": "Mondstadt",
-    "rarity": "4",
-    "images": {
-        "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png",
-        "card": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Character_Amber_Card.jpg",
-        "potrait": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Character_Amber_Portrait.png"
-    },
-    "cv": {
-        "japanese": "Manaka Iwani",
-        "korean": "Kim Yeon-woo",
-        "chinese": "Tingting Hu"
-    },
-    "affiliation": "Knights of Favonius",
-    "description": "A perky, straightforward girl, who is also the only Outrider of the Knights of Favonius. Her amazing mastery of the glider has made her a three-time winner of the Gliding Championship in Mondstadt. As a rising star within the Knights of Favonius, Amber is always ready for any challenging tasks.",
-    "url": "https://genshin-impact.fandom.com/wiki/Amber"
+  name: 'Amber',
+  titles: [ 'Outrider', 'Champion Glider' ],
+  element: 'Pyro',
+  weapontype: 'Bow',
+  gender: 'Female',
+  region: 'Mondstadt',
+  rarity: '4',
+  birthday: 'August 10',
+  constellation: 'Lepus',
+  substat: 'ATK%',
+  images: {
+    image: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png',
+    card: 'https://static.wikia.nocookie.net/gensin-impact/images/2/26/Character_Amber_Card.jpg',
+    portrait: 'https://static.wikia.nocookie.net/gensin-impact/images/0/00/Character_Amber_Portrait.png'
+  },
+  cv: {
+    english: 'Kelly Baskin',
+    japanese: 'Manaka Iwani',
+    korean: 'Kim Yeon-woo',
+    chinese: 'Tingting Hu'
+  },
+  affiliation: 'Knights of Favonius',
+  description: 'A perky, straightforward girl, who is also the only Outrider of the Knights of Favonius. Her amazing mastery of the glider has made her a three-time winner of the Gliding Championship in Mondstadt. As a rising star within the Knights of Favonius, Amber is always ready for any challenging tasks.',
+  talentmaterialtype: 'Freedom',
+  url: 'https://genshin-impact.fandom.com/wiki/Amber'
 }
+```
+
+## genshin.characters('carmen')
+
+```js
+{
+  name: 'Venti',
+  titles: [ 'Windborne Bard', 'The God of Freedom', 'Tone-Deaf Bar' ],
+  element: 'Anemo',
+  weapontype: 'Bow',
+  gender: 'Male',
+  region: 'Mondstadt',
+  rarity: '5',
+  birthday: 'June 16',
+  constellation: 'Carmen Dei',
+  substat: 'Energy Recharge%',
+  images: {
+    image: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Character_Venti_Thumb.png',
+    card: 'https://static.wikia.nocookie.net/gensin-impact/images/7/76/Character_Venti_Card.jpg',
+    portrait: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Character_Venti_Portrait.png'
+  },
+  cv: {
+    english: 'Erika Harlacher',
+    japanese: 'Ayumu Murase',
+    korean: 'Jung Yoo-jung',
+    chinese: 'Miaojiang'
+  },
+  affiliation: 'Archons',
+  description: "A bard that seems to have arrived on some unknown wind - sometimes sings songs as old as the hills, and other times sings poems fresh and new. Likes apples and lively places, but is not a fan of cheese or anything sticky. When using his Anemo power to control the wind, it often appears as feathers, as he's fond of that which appears light and breezy.",
+  talentmaterialtype: 'Ballad',
+  url: 'https://genshin-impact.fandom.com/wiki/Venti'
+}
+```
+
+## genshin.characters('Feb')
+
+```js
+[ 'Beidou', 'Bennett' ]
 ```
 
 ## genshin.characters('pyro')
@@ -60,17 +104,21 @@ const genshin = require('genshin-db');
 [ "Amber", "Bennett", "Diluc", "Klee", "Xiangling" ]
 ```
 
+## genshin.characters('geo dmg%')
+
+```js
+[ 'Ningguang', 'Zhongli' ]
+```
+
 ## genshin.characters('liyue')
 
 ```js
 [
-  "Beidou",
-  "Chongyun",
-  "Keqing",
-  "Ningguang",
-  "Qiqi",
-  "Xiangling",
-  "Xingqiu"
+  'Beidou', 'Chongyun',
+  'Keqing', 'Ningguang',
+  'Qiqi',   'Xiangling',
+  'Xiao',   'Xingqiu',
+  'Xinyan', 'Zhongli'
 ]
 ```
 
@@ -78,10 +126,10 @@ const genshin = require('genshin-db');
 
 ```js
 [
-  "Aether",  "Jean",
-  "Kaeya",   "Keqing",
-  "Lumine",  "Qiqi",
-  "Xingqiu"
+  'Aether',  'Jean',
+  'Kaeya',   'Keqing',
+  'Lumine',  'Qiqi',
+  'Xingqiu'
 ]
 ```
 
@@ -390,7 +438,111 @@ const genshin = require('genshin-db');
   }
 }
 ```
+# genshin.recipes(query[, opts])
 
+- [genshin.recipes('temptation')](#genshinrecipestemptation)
+- [genshin.recipes('4')](#genshinrecipes4)
+- [genshin.recipes('warrior')](#genshinrecipeswarrior)
+- [genshin.recipes('cabbage')](#genshinrecipescabbage)
+- [genshin.recipes('atK')](#genshinrecipesatk)
+- [genshin.recipes('diluc')](#genshinrecipesdiluc)
+
+## genshin.recipes('temptation')
+
+```js
+{
+  name: "Adeptus' Temptation",
+  rarity: '5',
+  foodrecipetype: 'Warrior',
+  effect: "Increases all party members' ATK by 260-372 and CRIT Rate by 8-12% for 300s.",
+  description: 'A complex, famous type of Liyue cuisine, in which specially selected ingredients are submerged and slowly bowled in soup stock. The recipe scribbled from memory alone was enough to urge the adepti to once again return to the world of men.',
+  buffs: [ 'ATK', 'CRIT Rate %' ],
+  images: {
+    image: 'https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/r_i_33.png'
+  },
+  ingredients: [ 'Ham x4', 'Crab x3', 'Shrimp Meat x3', 'Matsutake x3' ],
+  source: 'From a treasure chest on top of a floating platform in Liyue.'
+}
+```
+
+## genshin.recipes('4')
+
+```js
+[ 'Golden Crab', 'Jade Parcels', 'Moon Pie', 'Tianshu Meat' ]
+```
+
+## genshin.recipes('warrior')
+
+```js
+[
+  "Adeptus' Temptation",
+  "Adventurer's Breakfast Sandwich",
+  'Almond Tofu',
+  'Cold Cut Platter',
+  'Come and Get It',
+  'Der Weisheit Letzter Schluss (Life)',
+  'Die Heilige Sinfonie',
+  'Fried Radish Balls',
+  'Jade Parcels',
+  'Jueyun Chili Chicken',
+  'No Tomorrow',
+  '"Once Upon a Time in Mondstadt"',
+  `"Pile 'Em Up"`,
+  'Qingce Stir Fry',
+  'Satisfying Salad',
+  'Sautéed Matsutake',
+  'Tianshu Meat'
+]
+```
+
+## genshin.recipes('cabbage')
+
+```js
+[
+  'Der Weisheit Letzter Schluss (Life)',
+  'Jade Parcels',
+  'Mushroom Pizza',
+  'Northern Smoked Chicken',
+  'Qingce Stir Fry',
+  'Satisfying Salad'
+]
+```
+
+## genshin.recipes('crit rate')
+
+```js
+[
+  "Adeptus' Temptation",
+  'Come and Get It',
+  'Der Weisheit Letzter Schluss (Life)',
+  'Jueyun Chili Chicken',
+  'No Tomorrow',
+  '"Once Upon a Time in Mondstadt"',
+  `"Pile 'Em Up"`,
+  'Satisfying Salad',
+  'Tianshu Meat'
+]
+```
+
+## genshin.recipes('diluc')
+
+```js
+{
+  name: '"Once Upon a Time in Mondstadt"',
+  rarity: '3',
+  foodrecipetype: 'Warrior',
+  effect: "Increases all party members' CRIT Rate by 20% and CRIT DMG by 20% for 300s.",
+  description: "Diluc's specialty. Feast your eyes and then your stomach upon this delicacy as the soft ribs melt in your mouth. Who knew Diluc was able to cook this well?",
+  buffs: [ 'CRIT Rate %', 'CRIT DMG %' ],
+  images: {
+    image: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_%22Once_Upon_a_Time_in_Mondstadt%22.png/revision/latest/scale-to-width-down/202?cb=20201028200634'
+  },
+  ingredients: [ 'Raw Meat x3', 'Potato x3', 'Small Lamp Grass x1', 'Cheese x1' ],
+  source: "Chance to obtain when cooking Pile 'Em Up with Diluc.",
+  base: `"Pile 'Em Up"`,
+  cook: 'Diluc'
+}
+```
 
 # extra
 

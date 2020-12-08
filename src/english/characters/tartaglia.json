@@ -1,5 +1,6 @@
 {
     "name": "Tartaglia",
+    "aliases": ["Childe"],
     "titles": [
         "Childe",
         "Eleventh of the Fatui Harbingers"
@@ -9,6 +10,9 @@
     "gender": "Male",
     "region": "Snezhnaya",
     "rarity": "5",
+    "birthday": "July 20",
+    "constellation": "Monoceros Caeli",
+    "substat": "Hydro DMG%",
     "images": {
         "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Character_Childe_Thumb.png",
         "card": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Character_Tartaglia_Card.png",
